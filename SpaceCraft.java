@@ -1,7 +1,7 @@
 public class SpaceCraft {
-    Position position;
-    double radius;
-    Speed speed;
+    private Position position;
+    private double radius;
+    private Speed speed;
 
     public SpaceCraft(double x, double y, double z, double r, double vx, double vy, double vz) {
         this.position = new Position(x, y, z);
@@ -10,6 +10,18 @@ public class SpaceCraft {
     }
 
     public void move(double timeElapsed) {
-        this.position = new Position(position.x + speed.vx * timeElapsed, position.y + speed.vy * timeElapsed, position.z + speed.vz * timeElapsed);
+        this.position = new Position(position.getX() + speed.getVx() * timeElapsed, position.getY() + speed.getVy() * timeElapsed, position.getZ() + speed.getVz() * timeElapsed);
+    }
+
+    public Position getPosition() {
+        return this.position;
+    }
+
+    public double getRadius() {
+        return radius;
+    }
+
+    public Speed getSpeed() {
+        return speed;
     }
 }

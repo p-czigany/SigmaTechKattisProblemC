@@ -54,10 +54,10 @@ public class ProblemC {
     }
 
     public static double distance(SpaceCraft spaceCraft1, SpaceCraft spaceCraft2) {
-        double distanceOfCenters = sqrt((pow(spaceCraft2.position.x - spaceCraft1.position.x, 2) +
-                pow(spaceCraft2.position.y - spaceCraft1.position.y, 2) +
-                pow(spaceCraft2.position.z - spaceCraft1.position.z, 2)));
-        double radii = spaceCraft1.radius + spaceCraft2.radius;
+        double distanceOfCenters = sqrt((pow(spaceCraft2.getPosition().getX() - spaceCraft1.getPosition().getX(), 2) +
+                pow(spaceCraft2.getPosition().getY() - spaceCraft1.getPosition().getY(), 2) +
+                pow(spaceCraft2.getPosition().getZ() - spaceCraft1.getPosition().getZ(), 2)));
+        double radii = spaceCraft1.getRadius() + spaceCraft2.getRadius();
         return distanceOfCenters - radii;
     }
 }
